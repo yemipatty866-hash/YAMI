@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habapasta | Tienda en línea</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Habapasta</h1>
+        <p>Fideos elaborados con harina de haba</p>
+        <p>Una opción saludable y nutritiva</p>
+    </header>
+
+    <nav>
+        <a href="#" class="activo" data-ventana="inicio">Inicio</a>
+        <a href="#" data-ventana="caracteristicas">Características</a>
+        <a href="#" data-ventana="productos">Productos</a>
+        <a href="#" data-ventana="proceso">Proceso</a>
+        <a href="#" data-ventana="pedido">Mi pedido</a>
+    </nav>
+
+    <main>
+
+        <!-- INICIO -->
+        <section id="inicio" class="bienvenida ventana activa">
+            <h2>Bienvenidos a nuestra tienda</h2>
+            <h3>🌿 ¡EL SABOR DE NUESTRA TIERRA, HECHO PASTA!</h3>
+
+        <h4>Descubre Habapasta 🍝</h4>
+
+        <p>
+            ¿Listo para descubrir algo diferente? </p>
+            <p>En <strong>Habapasta</strong>, transformamos la
+            tradicional harina de haba en deliciosos fideos
+            artesanales, 
+            </p>
+            <p>creando una propuesta innovadora que
+            une nuestras raíces andinas con nuevas formas de
+            disfrutar la pasta.
+        </p>
+
+        <p class="frase">
+            ✨ Artesanal, innovador y lleno de tradición.
+        </p>
+
+        <p>
+            Descubre nuestro producto, conoce su proceso de
+            elaboración y disfruta de una nueva forma de
+            aprovechar la haba.
+        </p>
+       <img src="imagenes/habapasta.png" alt="Habapasta" class="imagen-habapasta">
+            <a class="boton" href="#" data-ventana="productos">Ver producto</a>
+        </section>
+
+        <!-- CARACTERÍSTICAS -->
+        <section id="caracteristicas" class="ventana">
+            <div class="header-caracteristicas">
+                <h2>Características de Habapasta</h2>
+                <p>"Venta y promoción de pasta artesanal de haba mediante herramientas de marketing digital"</p>
+            </div>
+            <div class="tab-content">
+                <img src="imagenes/caracteristicas.png"
+                     alt="Harina de haba"
+                     class="caracteristica">
+            </div>
+        </section>
+
+        <!-- PRODUCTOS -->
+        <section id="productos" class="ventana">
+            <h2>Nuestro producto</h2>
+
+            <div class="producto">
+                <img src="imagenes/habapasta.png"
+                     alt="Fideos elaborados con harina de haba"
+                     class="foto-producto">
+
+                <h3>Fideos de harina de haba</h3>
+                <p>Presentación: 250 gramos</p>
+                <p>Elaborados con harina de haba.</p>
+                <p class="precio">Precio: Bs 12</p>
+
+                <!-- Botones -->
+                <div class="acciones-producto">
+                    <button id="btnAgregar" type="button" class="btn-agregar">
+                        Agregar al carrito
+                    </button>
+
+                    <button id="btnVerPedido" type="button" class="btn-ver-pedido oculto">
+                        Ver mi pedido 🛒
+                    </button>
+                </div>
+
+                <p id="contadorCarrito" class="contador-carrito oculto">
+                    En el carrito: <span id="cantidadProductos">0</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- PROCESO -->
+        <section id="proceso" class="ventana">
+            <h2>Proceso de elaboración</h2>
+            <p>Presiona cada etapa para conocer cómo elaboramos Habapasta.</p>
+
+            <details>
+                <summary>1. Selección de ingredientes</summary>
+                <img src="imagenes/ingredientes.png" alt="Ingredientes">
+                <p>Preparamos la harina de haba y los demás ingredientes necesarios.</p>
+            </details>
+            <details>
+                <summary>2. Mezclado</summary>
+                <img src="imagenes/mezclado.jpeg" alt="Mezcla">
+                <p>Unimos los ingredientes para preparar la masa.</p>
+            </details>
+            <details>
+                <summary>3. Amasado</summary>
+                <img src="imagenes/amasado.png" alt="Amasado">
+                <p>Amasamos hasta obtener una mezcla uniforme y manejable.</p>
+            </details>
+            <details>
+                <summary>4. Estirado</summary>
+                <img src="imagenes/estirado.png" alt="Estirado">
+                <p>Estiramos la masa con un rodillo hasta dejarla delgada.</p>
+            </details>
+            <details>
+                <summary>5. Corte</summary>
+                <img src="imagenes/cortado.jpeg" alt="Corte">
+                <p>Cortamos la masa en tiras para formar los fideos.</p>
+            </details>
+            <details>
+                <summary>6. Secado</summary>
+                <img src="imagenes/secado.jpeg" alt="Secado">
+                <p>Dejamos secar los fideos en bandejas limpias.</p>
+            </details>
+            <details>
+                <summary>7. Empaquetado</summary>
+                <img src="imagenes/empacado.jpeg" alt="Empaquetado">
+                <p>Colocamos los fideos secos en su envase con la etiqueta.</p>
+            </details>
+            <details>
+                <summary>8. Producto final</summary>
+                <img src="imagenes/habapasta.png" alt="Producto final">
+                <p>Presentamos los fideos Habapasta listos para su preparación.</p>
+            </details>
+        </section>
+
+        <!-- PEDIDO -->
+        <section id="pedido" class="ventana">
+            <h2>Mi pedido</h2>
+
+            <div class="resumen-pedido">
+                <p>Productos seleccionados: <span id="cantidad">0</span></p>
+                <p>Total: Bs <span id="total">0</span></p>
+            </div>
+
+            <form id="formulario">
+                <label for="nombre">Nombre del comprador:</label>
+                <input type="text" id="nombre" required>
+
+                <label for="telefono">Número de teléfono:</label>
+                <input type="tel" id="telefono" required>
+
+                <button type="submit">Registrar pedido</button>
+            </form>
+
+            <p id="mensaje"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto escolar de comercio electrónico</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
